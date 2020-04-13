@@ -14,6 +14,7 @@ class App extends Component {
   state = {
     // Initialize user if there's a token, otherwise null
     user: userAPI.getUser(),
+    collection: [],
     instruments: []
   };
 
