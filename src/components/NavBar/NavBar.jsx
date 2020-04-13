@@ -4,7 +4,7 @@ import './NavBar.css';
 const NavBar = (props) => {
   let nav = props.user ?
     <div>
-      <Link to='/tktk-secret' className='NavBar-link'>Click here to check authentication!</Link>
+      <Link to='/addinstrument' className='NavBar-link'>Click here to check authentication!</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to='' className='NavBar-link' onClick={props.handleLogout}>Logout</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
