@@ -1,16 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const instrumentsCtrl = require('../../controllers/instruments');
+const collectionsCtrl = require('../../controllers/collections');
 
 /*------------------------------ Public Routes ------------------------------*/
 
-router.get('/', instrumentsCtrl.index);
+router.get('/', collectionsCtrl.index);
 
 /*----------------------------- Protected Routes ----------------------------*/
 
 // Process the token for only the routes below
 router.use(require('../../config/auth'));
-router.post('/', checkAuth, instrumentsCtrl.create);
+router.post('/', checkAuth, collectionsCtrl.create);
+router.get('/:id', checkAuth, collectionsCtrl.show);
+router.put('/:id', checkAuth, collectionsCtrl.update);
+router.delete('/:id', checkAuth, collectionsCtrl.delete);
 
 /*----------------------------- Helper Functions ----------------------------*/
 
