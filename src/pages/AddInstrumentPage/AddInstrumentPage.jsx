@@ -4,8 +4,8 @@ class AddInstrumentPage extends Component {
     state ={
         invalidForm: true,
         formData :{
-            name:'',
             brand:'',
+            model:'',
             years: 0
         }
     };
@@ -34,8 +34,8 @@ class AddInstrumentPage extends Component {
                         <label>Name of Instrument</label>
                         <input
                             className="form-control"
-                            name="name"
-                            value={this.state.formData.name}
+                            name="brand"
+                            value={this.state.formData.brand}
                             onChange={this.handleChange}
                             required
                         />
@@ -44,8 +44,8 @@ class AddInstrumentPage extends Component {
                         <label>Instrument's Brand</label>
                         <input
                             className="form-control"
-                            name="brand"
-                            value={this.state.formData.brand}
+                            name="model"
+                            value={this.state.formData.model}
                             onChange={this.handleChange}
                             required
                         />                                         

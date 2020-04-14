@@ -4,7 +4,8 @@ const User = require('../models/user');
 module.exports = {
   index,
   create,
-  delete: deleteOne
+  delete: deleteOne,
+  update
 };
 
 async function index(req, res) {
@@ -33,4 +34,9 @@ async function deleteOne(req, res) {
   const deleteInstrument = await Instrument.findByIdAndRemove(req.params.id);
   console.log(deleteInstrument);
   res.status(200).json(deleteInstrument);
+}
+
+async function update(req,res) {
+  const updateInstrument = await Instrument.findByIdAndUpdate(req.params.id, req.body, {new:true});
+  res.status(200).json(updateInstrument)
 }

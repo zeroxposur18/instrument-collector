@@ -30,13 +30,13 @@ export function index() {
   .then(res => res.json());
 }
 
-export function create(collection) {
+export function create(instrument) {
   return fetch(BASE_URL, {
       method: 'POST',
       headers: {
           'content-type': 'application/json',
           'Authorization': 'Bearer ' + tokenService.getToken()},
-      body: JSON.stringify(collection)
+      body: JSON.stringify(instrument)
   }).then(res => res.json());
 }
 
@@ -44,4 +44,14 @@ export function deleteOne(id) {
   return fetch(`${BASE_URL}${id}`, {
     method: 'DELETE'
   }).then(res => res.json());
+}
+
+export function update(instrument) {
+  return fetch(`${BASE_URL}/${instrument._id}`, {
+    method: 'PUT',
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()},
+    body: JSON.stringify(instrument)
+    }).then(res => res.json());
 }

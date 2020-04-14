@@ -13,6 +13,7 @@ import AddInstrumentPage from '../AddInstrumentPage/AddInstrumentPage';
 import AddCollectionPage from '../AddCollectionPage/AddCollectionPage';
 import InstrumentsListPage from '../InstrumentListPage/InstrumentListPage';
 import CollectionListPage from '../CollectionsListPage/CollectionListPage';
+import EditInstrumentPage from '../EditInstrumentPage/EditInstrumentPage';
 class App extends Component {
   state = {
     // Initialize user if there's a token, otherwise null
@@ -42,10 +43,19 @@ class App extends Component {
   handleDeleteInstrument = async id => {
     await instrumentAPI.deleteOne(id);
     this.setState(state => ({
-      instruments: this.state.instruments.filter( i => i._id !== id)
+      instruments: state.instruments.filter( i => i._id !== id)
     }), () => this.props.history.push('/'));
-    }
+  }
   
+  handleUpdateInstrument = async updateInstrumentData => {
+    const updateInstrument = await instrumentAPI.update(updateInstrumentData);
+    const newInstrumentArray = this.state.instruments.map( i =>
+      i._id === updateInstrument._id ? updateInstrument : i);
+    this.setState(
+      {instruments: newInstrumentArray},
+      () => this.props.history.push('/')
+    )
+  }
 
   handleAddCollection = async newCollectionData => {
     const newCollection = await collectionAPI.create(newCollectionData);
@@ -110,6 +120,15 @@ class App extends Component {
                />
             :
               <Redirect to='/login'/>
+          }/>
+          <Route exact path='/editinstrument' render={(history, location) =>
+            userAPI.getUser() ?
+            <EditInstrumentPage 
+              handleUpdateInstrument={this.handleUpdateInstrument}
+              location={location}
+            />
+            :
+            <Redirect to='/login' /> 
           }/>
           <Route exact path='/' render={() =>
             <Instrument />
