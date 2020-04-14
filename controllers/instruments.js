@@ -31,5 +31,6 @@ async function create(req, res) {
 
 async function deleteOne(req, res) {
   const deleteInstrument = await Instrument.findByIdAndRemove(req.params.id);
+  console.log(deleteInstrument);
   res.status(200).json(deleteInstrument);
 }

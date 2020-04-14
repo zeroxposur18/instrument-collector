@@ -26,6 +26,6 @@ async function update(req, res) {
     res.status(200).json(updatedCollection);
 }
 async function deleteOne(req, res) {
-    const deleteCollection = await User.collections.finByIdAndRemove(req.params.id);
+    const deleteCollection = await User.collections.findByIdAndRemove(req.params.id);
     res.status(200).json(deleteCollection);
 }

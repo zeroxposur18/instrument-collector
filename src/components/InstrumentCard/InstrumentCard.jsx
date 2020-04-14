@@ -19,7 +19,7 @@ function InstrumentCard({instrument, handleDeleteInstrument}) {
                 <Link
                     className='btn btn-xs btn-warning'
                     to={{
-                        pathname: '/edit',
+                        pathname: '/editinstrument',
                         state: {instrument}
                     }}
                 >

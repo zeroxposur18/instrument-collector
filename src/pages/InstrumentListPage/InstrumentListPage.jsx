@@ -1,4 +1,5 @@
 import React from 'react';
+import './InstrumentListPage.css'
 import InstrumentCard from '../../components/InstrumentCard/InstrumentCard'
 
 function InstrumentListPage(props) {
