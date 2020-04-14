@@ -6,10 +6,11 @@ import LoginPage from '../LoginPage/LoginPage';
 import InstrumentsSecretPage from '../InstrumentsSecretPage/InstrumentsSecretPage'
 import * as instrumentAPI from '../../services/instrument-api';
 import * as userAPI from '../../services/user-api';
-import Instrument from '../../components/Instrument/Instrument'
-import NavBar from '../../components/NavBar/NavBar'
+import * as collectionAPI from '../../services/collection-api';
+import Instrument from '../../components/Instrument/Instrument';
+import NavBar from '../../components/NavBar/NavBar';
 import AddInstrumentPage from '../AddInstrumentPage/AddInstrumentPage';
-
+import AddCollectionPage from '../AddCollectionPage/AddCollectionPage';
 class App extends Component {
   state = {
     // Initialize user if there's a token, otherwise null
@@ -33,6 +34,13 @@ class App extends Component {
     const newInstrument = await instrumentAPI.create(newInstrumentData);
     this.setState(state => ({
       instruments: [...state.instruments, newInstrument]
+    }), this.props.history.push('/'));
+  }
+
+  handleAddCollection = async newCollectionData => {
+    const newCollection = await collectionAPI.create(newCollectionData);
+    this.setState(state => ({
+      collections: [...state.collections, newCollection]
     }), this.props.history.push('/'));
   }
 
@@ -66,6 +74,14 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
+          <Route exact path='/addcollection' render={() =>
+          userAPI.getUser() ?
+          <AddCollectionPage
+            handleAddCollection = {this.handleAddCollection}
+            />
+            :
+            <Redirect to='/login'/>  
+        } />
           <Route exact path='/addinstrument' render={() => 
             userAPI.getUser() ? 
               <AddInstrumentPage

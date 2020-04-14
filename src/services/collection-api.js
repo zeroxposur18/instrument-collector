@@ -1,6 +1,6 @@
 import tokenService from './tokenService';
 
-const BASE_URL = '/api/instruments/';
+const BASE_URL = '/api/collections/';
 
 export function index() {
   const options = {
@@ -26,11 +26,11 @@ export function index() {
 // }
 
 export function create(collection) {
-  return fetch(BASE_URL, {
-      method: 'POST',
-      headers: {
-          'content-type': 'application/json',
-          'Authorization': 'Bearer ' + tokenService.getToken()},
-      body: JSON.stringify(collection)
-  }).then(res => res.json());
+    return fetch(BASE_URL, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            'Authorization': 'Bearer ' + tokenService.getToken()},
+        body: JSON.stringify(collection)
+    }).then(res => res.json());
 }

@@ -7,7 +7,6 @@ const SALT_ROUNDS = 6;
 const collectionSchema = new Schema({
   label: {
     type: String,
-    required: true
   },
   instruments: [{ type: Schema.Types.ObjectId, ref: "instrument"}]
 
