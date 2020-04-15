@@ -11,6 +11,9 @@ function InstrumentCard({instrument, handleDeleteInstrument}) {
                     Model: {instrument.model}
                 </div>
                 <div className='card-content white-text center'>
+                    Condition: {instrument.condition}
+                </div>                
+                <div className='card-content white-text center'>
                     Years Owned: {instrument.years}
                 </div>
             </div>

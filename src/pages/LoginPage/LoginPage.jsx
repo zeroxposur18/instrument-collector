@@ -55,9 +55,9 @@ class LoginPage extends Component {
             />
           </div>
           <div>
-            <button>Log In</button>
+            <button className='btn btn-xs btn-warning'>Log In</button>
             &nbsp;&nbsp;&nbsp;
-            <Link to='/'>Cancel</Link>
+            <Link className='btn btn-xs btn-warning' to='/' >Cancel</Link>
           </div>
         </form>
       </div>

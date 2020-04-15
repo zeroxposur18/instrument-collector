@@ -6,6 +6,7 @@ class AddInstrumentPage extends Component {
         formData :{
             brand:'',
             model:'',
+            condition:'',
             years: 0
         }
     };
@@ -50,6 +51,16 @@ class AddInstrumentPage extends Component {
                             required
                         />                                         
                     </div>
+                    <div className="form-group">
+                        <label className="white-text">Condition</label>
+                        <input
+                            className="form-control white-text"
+                            name="condition"
+                            value={this.state.formData.condition}
+                            onChange={this.handleChange}
+                            required
+                        />                                         
+                    </div>                    
                     <div className="form-group white-text">
                         <label className='white-text'>Year's owned</label>
                         <input

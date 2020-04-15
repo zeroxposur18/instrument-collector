@@ -48,6 +48,16 @@ class EditInstrumentPage extends Component {
             />
           </div>
           <div className="form-group">
+            <label>Condition</label>
+            <input
+              className="form-control"
+              name="condition"
+              value={this.state.formData.condition}
+              onChange={this.handleChange}
+              required
+            />
+          </div>          
+          <div className="form-group">
             <label>Year's owned</label>
             <input
               className="form-control"

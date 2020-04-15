@@ -10,6 +10,9 @@ const instrumentSchema = new Schema({
       type: String,
   
     },
+    condition: {
+      type: String,
+    },
     years: {
       type: Number
     },
