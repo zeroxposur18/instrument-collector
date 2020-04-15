@@ -120,7 +120,7 @@ class App extends Component {
             :
               <Redirect to='/login'/>
           }/>
-          <Route exact path='/edit' render={(history, location ) =>
+          <Route exact path='/edit' render={({location}) =>
             <EditInstrumentPage 
               handleUpdateInstrument={this.handleUpdateInstrument}
               location = {location}
