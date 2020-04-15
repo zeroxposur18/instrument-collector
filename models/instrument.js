@@ -13,7 +13,7 @@ const instrumentSchema = new Schema({
     years: {
       type: Number
     },
-    user: [{ type: Schema.Types.ObjectId, ref: "User"}]
+    userId: { type: Schema.Types.ObjectId, ref: "User"}
   
 }, {
   timestamps: true
