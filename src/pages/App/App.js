@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import InstrumentsSecretPage from '../InstrumentsSecretPage/InstrumentsSecretPage'
 import * as instrumentAPI from '../../services/instrument-api';
 import * as userAPI from '../../services/user-api';
 import * as collectionAPI from '../../services/collection-api';
@@ -54,7 +53,7 @@ class App extends Component {
     this.setState(
       {instruments: newInstrumentArray},
       () => this.props.history.push('/')
-    )
+    );
   }
 
   handleAddCollection = async newCollectionData => {
@@ -81,7 +80,7 @@ class App extends Component {
           user={this.state.user}
           handleLogout={this.handleLogout}
         />
-        <Switch>
+
           <Route exact path='/login' render={({ history }) => 
             <LoginPage
               history={history}
@@ -121,19 +120,16 @@ class App extends Component {
             :
               <Redirect to='/login'/>
           }/>
-          <Route exact path='/editinstrument' render={(history, location) =>
-            userAPI.getUser() ?
+          <Route exact path='/edit' render={(history, location ) =>
             <EditInstrumentPage 
               handleUpdateInstrument={this.handleUpdateInstrument}
-              location={location}
-            />
-            :
-            <Redirect to='/login' /> 
+              location = {location}
+            /> 
           }/>
           <Route exact path='/' render={() =>
             <Instrument />
           }/>
-        </Switch>
+
       </div>
     );
   }

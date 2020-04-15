@@ -25,10 +25,10 @@ class EditInstrumentPage extends Component {
   render() {
     return (
       <>
-        <h1>Edit Puppy</h1>
+        <h1>Edit Instrument</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label>Instrument's Brand (required)</label>
+            <label>Instrument's Brand</label>
             <input
               className="form-control"
               name="brand"
@@ -38,7 +38,7 @@ class EditInstrumentPage extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Instrument's Model (required)</label>
+            <label>Instrument's Model</label>
             <input
               className="form-control"
               name="model"

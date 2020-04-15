@@ -31,7 +31,7 @@ class AddInstrumentPage extends Component {
                 <h1>Add Instrument</h1>
                 <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Name of Instrument</label>
+                        <label>Instrument's Brand</label>
                         <input
                             className="form-control"
                             name="brand"
@@ -41,7 +41,7 @@ class AddInstrumentPage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Instrument's Brand</label>
+                        <label>Instrument's Model</label>
                         <input
                             className="form-control"
                             name="model"

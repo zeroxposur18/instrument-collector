@@ -5,7 +5,8 @@ module.exports = {
   index,
   create,
   delete: deleteOne,
-  update
+  update,
+  show
 };
 
 async function index(req, res) {
@@ -24,6 +25,11 @@ async function index(req, res) {
 //     res.status(500).json(err);
 //   }
 // }
+
+async function show(req, res) {
+  const instrument = await Instrument.findById(req.params.id);
+  res.status(200).json(instrument)
+};
 
 async function create(req, res) {
   const instrument = await Instrument.create(req.body);
