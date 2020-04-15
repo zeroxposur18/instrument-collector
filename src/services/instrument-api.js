@@ -42,7 +42,11 @@ export function create(instrument) {
 
 export function deleteOne(id) {
   return fetch(`${BASE_URL}/${id}`, {
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
   }).then(res => res.json());
 }
 

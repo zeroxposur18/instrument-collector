@@ -31,9 +31,9 @@ class AddInstrumentPage extends Component {
                 <h1>Add Instrument</h1>
                 <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Instrument's Brand</label>
+                        <label className="white-text">Instrument's Brand</label>
                         <input
-                            className="form-control"
+                            className="form-control white-text"
                             name="brand"
                             value={this.state.formData.brand}
                             onChange={this.handleChange}
@@ -41,19 +41,19 @@ class AddInstrumentPage extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Instrument's Model</label>
+                        <label className="white-text">Instrument's Model</label>
                         <input
-                            className="form-control"
+                            className="form-control white-text"
                             name="model"
                             value={this.state.formData.model}
                             onChange={this.handleChange}
                             required
                         />                                         
                     </div>
-                    <div className="form-group">
-                        <label>Year's owned</label>
+                    <div className="form-group white-text">
+                        <label className='white-text'>Year's owned</label>
                         <input
-                            className="form-control"
+                            className="form-control white-text"
                             name="years"
                             value={this.state.formData.years}
                             onChange={this.handleChange}

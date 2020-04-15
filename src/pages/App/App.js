@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Route, Redirect} from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -10,6 +9,9 @@ import NavBar from '../../components/NavBar/NavBar';
 import AddInstrumentPage from '../AddInstrumentPage/AddInstrumentPage';
 import InstrumentsListPage from '../InstrumentListPage/InstrumentListPage';
 import EditInstrumentPage from '../EditInstrumentPage/EditInstrumentPage';
+import './App.css';
+import 'materialize-css/dist/css/materialize.css'
+
 class App extends Component {
   state = {
     // Initialize user if there's a token, otherwise null
@@ -67,7 +69,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to Instrument Collector</h1>
+        <h1>Instrument Collector</h1>
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
