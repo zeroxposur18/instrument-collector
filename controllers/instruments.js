@@ -1,5 +1,4 @@
 var Instrument = require('../models/instrument');
-const User = require('../models/user');
 
 module.exports = {
   index,

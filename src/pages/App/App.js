@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
+import { Route, Redirect} from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import * as instrumentAPI from '../../services/instrument-api';
 import * as userAPI from '../../services/user-api';
-import * as collectionAPI from '../../services/collection-api';
 import Instrument from '../../components/Instrument/Instrument';
 import NavBar from '../../components/NavBar/NavBar';
 import AddInstrumentPage from '../AddInstrumentPage/AddInstrumentPage';
-import AddCollectionPage from '../AddCollectionPage/AddCollectionPage';
 import InstrumentsListPage from '../InstrumentListPage/InstrumentListPage';
-import CollectionListPage from '../CollectionsListPage/CollectionListPage';
 import EditInstrumentPage from '../EditInstrumentPage/EditInstrumentPage';
 class App extends Component {
   state = {
@@ -36,14 +33,14 @@ class App extends Component {
     const newInstrument = await instrumentAPI.create(newInstrumentData);
     this.setState(state => ({
       instruments: [...state.instruments, newInstrument]
-    }), this.props.history.push('/'));
+    }), this.props.history.push('/instrumentlist'));
   }
 
   handleDeleteInstrument = async id => {
     await instrumentAPI.deleteOne(id);
     this.setState(state => ({
       instruments: state.instruments.filter( i => i._id !== id)
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/instrumentlist'));
   }
   
   handleUpdateInstrument = async updateInstrumentData => {
@@ -52,16 +49,11 @@ class App extends Component {
       i._id === updateInstrument._id ? updateInstrument : i);
     this.setState(
       {instruments: newInstrumentArray},
-      () => this.props.history.push('/')
+      () => this.props.history.push('/instrumentlist')
     );
   }
 
-  handleAddCollection = async newCollectionData => {
-    const newCollection = await collectionAPI.create(newCollectionData);
-    this.setState(state => ({
-      collections: [...state.collections, newCollection]
-    }), this.props.history.push('/'));
-  }
+
 
   /*-------------------------- Lifecycle Methods ---------------------------*/
 
@@ -100,18 +92,6 @@ class App extends Component {
           />  
         } 
         />
-          <Route exact path='/collectionlist' render={() =>
-          <CollectionListPage />
-          }
-          />
-          <Route exact path='/addcollection' render={() =>
-          userAPI.getUser() ?
-          <AddCollectionPage
-            handleAddCollection = {this.handleAddCollection}
-            />
-            :
-            <Redirect to='/login'/>  
-        } />
           <Route exact path='/addinstrument' render={() => 
             userAPI.getUser() ? 
               <AddInstrumentPage
