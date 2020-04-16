@@ -89,6 +89,7 @@ class App extends Component {
           }/>
           <Route exact path='/instrumentlist' render={(history) =>
           <InstrumentsListPage 
+            user={this.state.user}
             instruments ={this.state.instruments}
             handleDeleteInstrument={this.handleDeleteInstrument}
           />  

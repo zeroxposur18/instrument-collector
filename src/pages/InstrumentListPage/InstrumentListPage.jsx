@@ -11,6 +11,7 @@ function InstrumentListPage(props) {
                 <InstrumentCard
                 key={instrument._id}
                 instrument={instrument}
+                user={props.user}
                 handleDeleteInstrument={props.handleDeleteInstrument}
                 />)}
         </div>

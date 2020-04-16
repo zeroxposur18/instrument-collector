@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function InstrumentCard({instrument, handleDeleteInstrument}) {
+function InstrumentCard({instrument, handleDeleteInstrument, user}) {
     return (
         <div className='card blue-grey darken-1'>
             <div className="card-content white-text">
@@ -12,27 +12,37 @@ function InstrumentCard({instrument, handleDeleteInstrument}) {
                 </div>
                 <div className='card-content white-text center'>
                     Condition: {instrument.condition}
-                </div>                
+                </div> 
+                <div className='card-content white-text center'>
+                    Owner of Instrument: {instrument.ownerName}
+                </div>                              
                 <div className='card-content white-text center'>
                     Years Owned: {instrument.years}
-                </div>
+                </div>           
             </div>
             <div className='card-action'>
+                {instrument.userId === user._id ?
                 <Link
-                    className='btn btn-xs btn-warning'
-                    to={{
-                        pathname: '/edit',
-                        state: {instrument}
-                    }}
-                    >
+                className='btn btn-xs btn-warning'
+                to={{
+                    pathname: '/edit',
+                    state: {instrument}
+                }}
+                >
                 EDIT
                 </Link>
+                :
+                <></>
+            }   {instrument.userId === user._id ?
                 <button
-                    className='btn btn-xs btn-warning'
-                    onClick={() => handleDeleteInstrument(instrument._id)}
-                    >
+                className='btn btn-xs btn-warning'
+                onClick={() => handleDeleteInstrument(instrument._id)}
+                >
                     DELETE
                 </button>
+                :
+                <></>
+            }
                     </div>
             </div>
         </div>

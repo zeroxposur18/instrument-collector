@@ -31,6 +31,8 @@ async function show(req, res) {
 };
 
 async function create(req, res) {
+  req.body.userId = req.user._id;
+  req.body.ownerName = req.user.name;
   const instrument = await Instrument.create(req.body);
   res.status(201).json(instrument)
 }
