@@ -26,7 +26,7 @@
 
 ### ***Getting Started***
 
-##### Start off by creating a new user and signing into the app. Once signed in, create a collection and start adding games to it!
+##### Start off by creating a new user and signing into the app. Once signed in, add instruments to the database!
 ##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/mTsGACNj/instrument-collector).
 ##### The project itself was deployed using Heroku and can be viewed [here](https://instrument-collector.herokuapp.com/).
 ***
@@ -34,13 +34,12 @@
 ### ***Screenshots***
 
 ###### Entity Relationship Diagram
-![ERD](main_app/static/images/concepts/ERD.png)
+![ERD](img/erd.jpg)
 
 ###### Wireframe
-![Wireframe](main_app/static/images/concepts/wireframe.png)
+![Wireframe](img/wf.jpg)
 
-###### Pitch Deck Screenshot
-![Pitch Deck Screenshot](main_app/static/images/concepts/pitch-deck.png)
+
 
 ###### About Page
 ![About Page](main_app/static/images/screenshots/ss1.png)
