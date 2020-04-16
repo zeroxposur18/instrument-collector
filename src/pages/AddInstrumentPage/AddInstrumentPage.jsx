@@ -29,8 +29,8 @@ class AddInstrumentPage extends Component {
     render() {
         return (
             <>
-                <h1>Add Instrument</h1>
-                <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+                <h1 className="blue-grey darken-2 white-text">Add Instrument</h1>
+                <form className="blue-grey darken-2" ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label className="white-text">Instrument's Brand</label>
                         <input
@@ -61,7 +61,7 @@ class AddInstrumentPage extends Component {
                             required
                         />                                         
                     </div>                    
-                    <div className="form-group white-text">
+                    <div className="form-group">
                         <label className='white-text'>Year's owned</label>
                         <input
                             className="form-control white-text"

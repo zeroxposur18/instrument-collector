@@ -69,50 +69,51 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Instrument Collector</h1>
+        <div className="title">
         <NavBar
           user={this.state.user}
           handleLogout={this.handleLogout}
-        />
-
+          />
+          </div>
+        <main>
           <Route exact path='/login' render={({ history }) => 
             <LoginPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
           <Route exact path='/instrumentlist' render={(history) =>
           <InstrumentsListPage 
-            user={this.state.user}
-            instruments ={this.state.instruments}
-            handleDeleteInstrument={this.handleDeleteInstrument}
+          user={this.state.user}
+          instruments ={this.state.instruments}
+          handleDeleteInstrument={this.handleDeleteInstrument}
           />  
         } 
         />
           <Route exact path='/addinstrument' render={() => 
             userAPI.getUser() ? 
-              <AddInstrumentPage
+            <AddInstrumentPage
                 handleAddInstrument = {this.handleAddInstrument}
-               />
-            :
-              <Redirect to='/login'/>
-          }/>
+                />
+                :
+                <Redirect to='/login'/>
+              }/>
           <Route exact path='/edit' render={({location}) =>
             <EditInstrumentPage 
-              handleUpdateInstrument={this.handleUpdateInstrument}
-              location = {location}
+            handleUpdateInstrument={this.handleUpdateInstrument}
+            location = {location}
             /> 
           }/>
           <Route exact path='/' render={() =>
             <Instrument />
           }/>
-
+            </main>
       </div>
     );
   }

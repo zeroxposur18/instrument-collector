@@ -1,12 +1,28 @@
 .App {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 7vmin auto;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  background-color: black;
+  color: cornflowerblue;
+}
+.App header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: white;
+}
+.App main{
+  background-color: cornflowerblue;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 50;
-  color:white;
-  background-color: cornflowerblue;
 }
-.html {
-  background-color:cornflowerblue;
-}
+

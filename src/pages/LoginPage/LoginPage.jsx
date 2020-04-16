@@ -33,11 +33,12 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div className="LoginPage">
+      <div className="LoginPage blue-grey darken-2">
         <header>Log In</header>
         <form onSubmit={this.handleSubmit} >
           <div>
             <input 
+              className="white-text"            
               type="email" 
               placeholder="Email"
               value={this.state.email} 
@@ -46,7 +47,8 @@ class LoginPage extends Component {
             />
           </div>
           <div>
-            <input 
+            <input
+              className="white-text"             
               type="password"
               placeholder="Password" 
               value={this.state.pw} 

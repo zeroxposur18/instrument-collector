@@ -1,12 +1,5 @@
-.NavBar {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 20px;
-  }
-  .NavBar-link {
-    margin: 0 10px;
-    color:white;
-  }
-  .NavBar-welcome {
-    color: white;
-  }
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

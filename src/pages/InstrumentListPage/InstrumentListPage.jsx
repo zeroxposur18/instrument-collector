@@ -5,7 +5,7 @@ import InstrumentCard from '../../components/InstrumentCard/InstrumentCard'
 function InstrumentListPage(props) {
     return (
         <>
-        <h1>Instrument List</h1>
+        <h1 className="blue-grey darken-2 white-text">Instrument List</h1>
         <div className="row">
         <div className="col s15">
         <div className='InstrumentListPage'>

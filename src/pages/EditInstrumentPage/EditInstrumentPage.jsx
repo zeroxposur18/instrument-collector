@@ -28,7 +28,7 @@ class EditInstrumentPage extends Component {
         <h1>Edit Instrument</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label>Instrument's Brand</label>
+            <label className="black-text">Instrument's Brand</label>
             <input
               className="form-control"
               name="brand"
@@ -38,7 +38,7 @@ class EditInstrumentPage extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Instrument's Model</label>
+            <label className="black-text">Instrument's Model</label>
             <input
               className="form-control"
               name="model"
@@ -48,7 +48,7 @@ class EditInstrumentPage extends Component {
             />
           </div>
           <div className="form-group">
-            <label>Condition</label>
+            <label className="black-text">Condition</label>
             <input
               className="form-control"
               name="condition"
@@ -58,7 +58,7 @@ class EditInstrumentPage extends Component {
             />
           </div>          
           <div className="form-group">
-            <label>Year's owned</label>
+            <label className="black-text">Year's owned</label>
             <input
               className="form-control"
               name="years"

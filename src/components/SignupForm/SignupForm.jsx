@@ -33,11 +33,12 @@ class SignupForm extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="blue-grey darken-2">
         <header>Sign Up</header>
         <form onSubmit={this.handleSubmit} >
           <div>
-            <input 
+            <input
+              className="white-text"
               type="text"
               placeholder="Name" 
               value={this.state.name} 
@@ -47,6 +48,7 @@ class SignupForm extends Component {
           </div>
           <div>
             <input 
+              className="white-text"            
               type="email"
               placeholder="Email" 
               value={this.state.email} 
@@ -64,7 +66,8 @@ class SignupForm extends Component {
             />
           </div>
           <div className="form-group">
-            <input 
+            <input
+              className="white-text"             
               type="password" 
               placeholder="Confirm Password" 
               value={this.state.passwordConf} 
