@@ -1,70 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 8-Bit Archive
 
-## Available Scripts
+### Date: 4/16/2020
 
-In the project directory, you can run:
+#### Tan Vu
+#### [GitHub](https://github.com/zeroxposur18) | [LinkedIn](https://www.linkedin.com/in/tan-m-vu/)
+***
 
-### `npm start`
+### ***Description***
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##### Instrument Collector is a MERN-stacked application to keep track of your instruments! See who else owns instruments and collaborate!
+***
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### ***Technologies Used***
 
-### `npm test`
+* ##### React
+* ##### CSS
+* ##### JavaScript
+* ##### Express
+* ##### Node.js
+* ##### MongoDB
+* ##### Materialize 
+* ##### Heroku
+* ##### Chajr
+***
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ***Getting Started***
 
-### `npm run build`
+##### Start off by creating a new user and signing into the app. Once signed in, create a collection and start adding games to it!
+##### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/mTsGACNj/instrument-collector).
+##### The project itself was deployed using Heroku and can be viewed [here](https://instrument-collector.herokuapp.com/).
+***
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ***Screenshots***
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+###### Entity Relationship Diagram
+![ERD](main_app/static/images/concepts/ERD.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###### Wireframe
+![Wireframe](main_app/static/images/concepts/wireframe.png)
 
-### `npm run eject`
+###### Pitch Deck Screenshot
+![Pitch Deck Screenshot](main_app/static/images/concepts/pitch-deck.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+###### About Page
+![About Page](main_app/static/images/screenshots/ss1.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###### Add A Game
+![Add A Game](main_app/static/images/screenshots/ss2.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###### My Collections
+![My Collections](main_app/static/images/screenshots/ss3.png)
+***
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### ***Credits***
+##### CSS: [Materialize](https://materializecss.com/)
+##### Application Startup: [Chajr](https://github.com/DavidStinson/chajr)
+***
 
-## Learn More
+### ***Future Updates***
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# instrument-collector
-#### Started on: 04-13-2020
+- [ ] Allow Users to put up For Sale option with price marked
+- [ ] Make app completely scalable for mobile
+- [ ] Add user specific collections
+- [ ] Add animations/interactive styling
+***

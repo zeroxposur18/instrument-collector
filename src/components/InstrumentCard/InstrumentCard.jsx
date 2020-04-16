@@ -6,7 +6,7 @@ function InstrumentCard({instrument, handleDeleteInstrument, user}) {
         <div className='card blue-grey darken-1'>
             <div className="card-content white-text">
                 <h3 className='card-title center'>{instrument.brand}</h3>
-            <div className='card blue-grey darken-2'>
+            <div className='blue-grey darken-2'>
                 <div className='card-content white-text center'>
                     Model: {instrument.model}
                 </div>
@@ -43,9 +43,9 @@ function InstrumentCard({instrument, handleDeleteInstrument, user}) {
                 :
                 <></>
             }
-                    </div>
             </div>
-        </div>
+        </div>            
+                    </div>
     )
 }
 
