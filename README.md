@@ -41,19 +41,18 @@
 
 
 
-###### About Page
-![About Page](main_app/static/images/screenshots/ss1.png)
+###### Home Page
+![Home Page](img/ss1.png)
 
 ###### Add A Game
-![Add A Game](main_app/static/images/screenshots/ss2.png)
 
-###### My Collections
-![My Collections](main_app/static/images/screenshots/ss3.png)
 ***
 
 ### ***Credits***
 ##### CSS: [Materialize](https://materializecss.com/)
 ##### Application Startup: [Chajr](https://github.com/DavidStinson/chajr)
+##### Confetti Animations: [Confetti](https://www.npmjs.com/package/react-confetti)
+##### Text Animation: [Text-loop](https://github.com/braposo/react-text-loop)
 ***
 
 ### ***Future Updates***
