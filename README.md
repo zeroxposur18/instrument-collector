@@ -44,7 +44,7 @@
 ###### Home Page
 ![Home Page](img/ss1.png)
 
-###### Add A Game
+
 
 ***
 
