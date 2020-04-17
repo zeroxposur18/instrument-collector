@@ -12,7 +12,7 @@ const InstrumentsSecretPage = () => {
     <div className="center blue-grey darken-2 white-text">
       <h1>SEI-CC-7 ATX</h1>
       <h6>
-        <TextLoop interval={100}>
+        <TextLoop interval={500}>
           <span>Alan McCracken</span>
           <span>Alanna Celentano</span>
           <span>Brandon Carter</span>
