@@ -9,6 +9,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import AddInstrumentPage from '../AddInstrumentPage/AddInstrumentPage';
 import InstrumentsListPage from '../InstrumentListPage/InstrumentListPage';
 import EditInstrumentPage from '../EditInstrumentPage/EditInstrumentPage';
+import SecretPage from '../InstrumentsSecretPage/InstrumentsSecretPage';
 import './App.css';
 import 'materialize-css/dist/css/materialize.css'
 
@@ -87,6 +88,11 @@ class App extends Component {
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin}
             />
+          }/>
+          <Route exact path='/secretpage' render={({history}) => 
+          <SecretPage
+          history={history}
+          />
           }/>
           <Route exact path='/instrumentlist' render={(history) =>
           <InstrumentsListPage 

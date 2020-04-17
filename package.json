@@ -14,10 +14,12 @@
     "mongoose": "^5.9.9",
     "morgan": "^1.10.0",
     "react": "^16.13.1",
+    "react-confetti": "^5.0.1",
     "react-dom": "^16.13.1",
     "react-materialize": "^3.8.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "react-text-loop": "^2.3.0",
     "serve-favicon": "^2.5.0"
   },
   "scripts": {
