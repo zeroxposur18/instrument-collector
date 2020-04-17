@@ -25,42 +25,42 @@ class EditInstrumentPage extends Component {
   render() {
     return (
       <>
-        <h1>Edit Instrument</h1>
-        <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+        <h1 className="blue-grey darken-2 white-text">Edit Instrument</h1>
+        <form className="blue-grey darken-2 white-text" ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label className="black-text">Instrument's Brand</label>
+            <label className="white-text">Instrument's Brand</label>
             <input
-              className="form-control"
+              className="form-control white-text"
               name="brand"
               value={this.state.formData.brand}
               onChange={this.handleChange}
               required
             />
           </div>
-          <div className="form-group">
-            <label className="black-text">Instrument's Model</label>
+          <div className="form-group white-text">
+            <label className="white-text">Instrument's Model</label>
             <input
-              className="form-control"
+              className="form-control white-text"
               name="model"
               value={this.state.formData.model}
               onChange={this.handleChange}
               required
             />
           </div>
-          <div className="form-group">
-            <label className="black-text">Condition</label>
+          <div className="form-group white-text">
+            <label className="white-text">Condition</label>
             <input
-              className="form-control"
+              className="form-control white-text"
               name="condition"
               value={this.state.formData.condition}
               onChange={this.handleChange}
               required
             />
           </div>          
-          <div className="form-group">
-            <label className="black-text">Year's owned</label>
+          <div className="form-group white-text">
+            <label className="white-text">Year's owned</label>
             <input
-              className="form-control"
+              className="form-control white-text"
               name="years"
               value={this.state.formData.years}
               onChange={this.handleChange}

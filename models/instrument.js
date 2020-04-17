@@ -4,14 +4,15 @@ const Schema = mongoose.Schema;
 const instrumentSchema = new Schema({
     brand: {
       type: String,
-      
+      required: true
     },
     model: {
       type: String,
-  
+      required: true
     },
     condition: {
       type: String,
+      required: true
     },
     years: {
       type: Number

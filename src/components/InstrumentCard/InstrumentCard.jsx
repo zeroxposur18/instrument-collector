@@ -20,7 +20,7 @@ function InstrumentCard({instrument, handleDeleteInstrument, user}) {
                     Years Owned: {instrument.years}
                 </div>           
             </div>
-            <div className='card-action'>
+            <div className='card-action center'>
                 {instrument.userId === user._id ?
                 <Link
                 className='btn btn-xs btn-warning'
