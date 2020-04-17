@@ -58,6 +58,7 @@ class SignupForm extends Component {
           </div>
           <div>
             <input 
+              className="white-text"
               type="password" 
               placeholder="Password" 
               value={this.state.password} 
